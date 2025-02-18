@@ -1,0 +1,14 @@
+{
+  "name": "prenotazioni-spettacoli",
+  "version": "1.0.0",
+  "description": "Sistema di prenotazione spettacoli teatrali",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "@supabase/supabase-js": "^2.0.0",
+    "dotenv": "^10.0.0"
+  }
+}
