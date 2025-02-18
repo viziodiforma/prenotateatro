@@ -1,28 +1,27 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sistema di Prenotazione Spettacoli</title>
-  <link rel="stylesheet" href="style.css"> <!-- Link al file CSS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema di Prenotazione Spettacoli</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Benvenuto nel Sistema di Prenotazione Spettacoli!</h1>
+    <div class="container">
+        <h1>Sistema di Prenotazione Spettacoli</h1>
+        <form id="prenotazioneForm">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required><br>
 
-  <!-- Form per fare una prenotazione -->
-  <form action="/prenotazioni" method="POST">
-    <label for="nome">Nome:</label>
-    <input type="text" id="nome" name="nome" required><br><br>
-    
-    <label for="spettacolo">Seleziona spettacolo:</label>
-    <select id="spettacolo" name="spettacolo" required>
-      <option value="spettacolo1">Spettacolo 1</option>
-      <option value="spettacolo2">Spettacolo 2</option>
-      <option value="spettacolo3">Spettacolo 3</option>
-    </select><br><br>
-    
-    <button type="submit">Prenota</button>
-  </form>
+            <label for="data_spettacolo">Data dello spettacolo:</label>
+            <input type="date" id="data_spettacolo" name="data_spettacolo" required><br>
 
+            <button type="submit">Prenota</button>
+        </form>
+        <p id="successMessage" style="color: green; display: none;">Prenotazione effettuata con successo!</p>
+        <p id="errorMessage" style="color: red; display: none;">Errore nella prenotazione. Riprova.</p>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
